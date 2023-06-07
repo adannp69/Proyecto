@@ -1,0 +1,75 @@
+body{
+    display:                flex;
+    justify-content:        center;
+    align-items:            center;
+    height:                 100vh;
+    margin:                 0;
+}
+
+.estructuraFormCodigo{
+    background:             #24303c; 
+    width:                  500px;
+    height:                 250px;
+    padding:                10px;
+    margin:                 0;
+    margin-top:             20px;
+    border-radius:          4px;
+    color:                  white ;
+    box-shadow:             7px 13px 37px #000; /*SOMBRA*/
+}/*FIN DE registro*/
+
+.contenedorGrid{
+    display:                grid;
+    grid-template-columns:  1fr;
+    grid-template-rows:     40% 27% 30%;
+}
+
+.nested-grid{
+    /*border:                 2px rgb(148, 0, 247) solid;*/
+    margin:                 10px 8px;
+}
+
+h4{
+    font-family:            'calibri';
+    color:                  white;    
+    font-size:              30px;
+    margin:                 5px 0 15px 0px;
+}/*FIN DE H4*/
+
+.inputDatos{
+    width:                  98%; 
+    background-color:       24303c;
+    padding:                8px 3px;
+    border-radius:          4px;  
+    font-size:              18px;
+}/*FIN DE CONTROLES 4 ETIQUETAS*/
+
+input:hover{
+    border:                 3px #4466af solid;
+}
+
+.hoverable:hover {
+    background-color:       #34b40d;
+}
+  
+.botonEnviar{ 
+    background-color:       #52c22f;
+    color:                  white;
+    font-size:              20px;
+    height:                 50px;
+    width:                  200px;
+    border-radius:          4px;
+    margin:                 auto;   
+}/*FIN DE botonEnviar*/
+
+.caja{
+    color:                  rgb(255, 255, 255);
+    font-family:            'calibri';
+    text-align:             left;
+    font-size:              18px;
+}/*fin de caja*/
+
+.centrarBoton{
+    margin: auto;
+/*    border:                 2px rgb(246, 250, 6) solid;*/
+}

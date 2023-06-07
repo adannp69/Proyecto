@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="../CSS/estilos.css">
+</head>
+
+<body>
+    <form class="estructura recuperarCuenta grid__RecuperarCuenta" method="post"> 
+
+        <h4 class="grid-nested__RecuperarCuenta"> RECUPERA TU CUENTA </h4>
+
+        <section class="grid-nested__RecuperarCuenta caja__RecuperarCuenta">
+            <p>Ingresa tu correo de recuperación.</p>
+        </section>
+
+        <section class="grid-nested__RecuperarCuenta">
+            <input  class=          "inputDatos"  
+                    type=           "email" 
+                    id=             "correo"
+                    name=           "correo" 
+                    placeholder=    "Ingresa tu email" 
+                    pattern=        "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    required>
+                    <span></span>
+        </section>
+
+        <section class="grid-nested__RecuperarCuenta centrar">
+            <input  class=          "botonEnviar hoverable" 
+                    type=           "submit" 
+                    value=          "Enviar">
+        </section>
+    </form>
+    
+    <script src="validacion.js"></script>
+
+</body>
+</html>

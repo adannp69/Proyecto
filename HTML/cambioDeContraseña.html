@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <title>Cambio de contraseña</title>
+</head>
+
+<body>
+    <form action="" class="estructura estructuraCambioContraseña contenedorGrid" method="post">
+        
+        <section class="nested-grid"    >
+            <h4>NUEVA CONTRASEÑA</h4>
+        </section>
+        
+        <section class="nested-grid caja">
+            Llena los campos para crear una nueva contraseña
+        </section>
+
+        <section class="nested-grid">
+            <input class="inputDatos"
+                    type=               "password"
+                    id=                 "nuevaContrasenia1"
+                    name=               "nuevaContrasenia1" 
+                    placeholder=        "Ingresa la nueva contraseña"
+                    pattern=            "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    required>
+                    <span></span>
+        </section>
+
+        <section class="nested-grid">
+            <input class="inputDatos"
+                    type=               "password"
+                    id=                 "nuevaContrasenia2"
+                    name=               "nuevaContrasenia2" 
+                    placeholder=        "Confirma tu contraseña"
+                    pattern=            "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    required>
+                    <span></span>
+        </section>    
+    
+        <section class="nested-grid centrar">
+            <input  onclick=    "validarContraseniaRecuperacion(event)"
+                    class=      "botonEnviar hoverable"
+                    type=       "submit"
+                    value=      "Enviar">
+
+                    <div id="error-message" class="nested-grid">
+                        Las contraseñas no coinciden; ingresalas correctamente.
+                    </div>
+
+        </section>
+    </form>
+    <script src="validacion.js"></script>
+</body>
+</html>
