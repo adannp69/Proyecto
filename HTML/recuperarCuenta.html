@@ -9,21 +9,19 @@
 </head>
 
 <body>
-    <form class="estructura recuperarCuenta grid__RecuperarCuenta" method="post"> 
+    <form action="/recuperar/recup" class="estructura recuperarCuenta grid__RecuperarCuenta" method="post"> 
 
         <h4 class="grid-nested__RecuperarCuenta"> RECUPERA TU CUENTA </h4>
 
         <section class="grid-nested__RecuperarCuenta caja__RecuperarCuenta">
-            <p>Ingresa tu correo de recuperación.</p>
+            <p>Ingresa tu correo o tu nombre de usuario.</p>
         </section>
 
         <section class="grid-nested__RecuperarCuenta">
             <input  class=          "inputDatos"  
                     type=           "email" 
-                    id=             "correo"
-                    name=           "correo" 
-                    placeholder=    "Ingresa tu email" 
-                    pattern=        "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    id=             "userOcorreo"
+                    name=           "userOcorreo"  
                     required>
                     <span></span>
         </section>
@@ -35,7 +33,7 @@
         </section>
     </form>
     
-    <script src="validacion.js"></script>
+    <script src="validacionrecuperarCuenta.js"></script>
 
 </body>
 </html>

@@ -11,21 +11,23 @@
 
 
 <body>
-
-    <form id="formulario" class="estructura iniciarSesion grid__IniciarSesion" method="post">
+<!--
+    <section class=" titulo">
+        <h2>U ACADEMY</h2>
+    </section>
+-->
+    <form action="/inciarSesion" id="formulario" class="estructura iniciarSesion grid__IniciarSesion" method="post">    
 
         <section class="grid-nested__IniciarSesion c1">
             <h4>INICIAR SESIÓN</h4>
         </section>
 
         <section class="grid-nested__IniciarSesion c1"> <!--CORREO O NOMBRE DE USUARIO-->
-            <input  
-                    class=         "inputDatos"  
-                    type=           "email" 
-                    id=             "correo" 
-                    name=           "correo" 
+            <input  class=         "inputDatos"  
+                    type=           "text" 
+                    id=             "user" 
+                    name=           "user" 
                     placeholder=    "Ingresa tu email o nombre de usuario"  
-                    pattern=        "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                     title=          "Ingresa tu correo electrónico"
                     required> 
                     <span> </span>  <!--AQUI RECAE LA VALIDACIÓN -->
@@ -35,24 +37,18 @@
             <input  
                     class=          "inputDatos" 
                     type=           "password" 
-                    id=             "contrasenia" 
-                    name=           "contrasenia" 
-                    pattern=        "/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/"
+                    id=             "passwd" 
+                    name=           "passwd"
+                    pattern=        "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                     placeholder=    "Ingresa tu contraseña"
                     title=          "Ingresa tu contraseña"     
                     required>
-
                     <span> </span>  <!--AQUI RECAE LA VALIDACIÓN -->
         </section>
 
-        <!--pattern=        "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-
-        -->
-
         <section class="grid-nested__IniciarSesion c1 centrar"> <!--ENVIAR-->
             <input class=           "botonEnviar hoverable" 
-                    type=           "submit" 
-                    value=          "Enviar">
+                    type=           "submit">
     
         </section>
         
@@ -65,7 +61,7 @@
         </section>
     </form>
 
-    <script src="validacion.js"></script>
+    <script src="validacioniniciarSesion.js"></script>
 
 </body>
 </html>

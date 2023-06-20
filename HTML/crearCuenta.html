@@ -10,7 +10,7 @@
 
 <body>
 
-    <form class="grid__CrearCuenta crearCuenta estructura" method="post" id="formulario">
+    <form id="formulario" action="/crear_cuenta/crearCuenta" class="grid__CrearCuenta crearCuenta estructura" method="post">
 
         <section class="grid-nested__CrearCuenta c1">
             <h4>CREA UNA CUENTA</h4>
@@ -20,62 +20,65 @@
             <p>Completa los datos que se te solicitan.</p>
         </section>
 
-        <div class="gridNestedNested__CrearCuenta c1"> <!--NOMBRE(S) Y APELLIDOS-->
+        <!--NOMBRE(S) Y APELLIDOS -->
+        <div class="gridNestedNested__CrearCuenta c1"> 
 
-            <section class="grid-nested__CrearCuenta"><!--NOMBRE(S) -->
-                <input  class=             "inputDatos"
+            <section class="grid-nested__CrearCuenta">
+                <input  class=          "inputDatos"
                         type=           "text" 
-                        id=             "nombre"
-                        name=           "nombre"
+                        id=             "nombres"
+                        name=           "nombres"
                         placeholder=    "Nombre(s)"
-                        pattern=        "^(?!.*([a-zA-Z])\1\1)[A-Za-zÁ-ÿ]{3,10}(\s[a-zA-Z]{3,20})?"
+                        pattern=        "^(?!.*([a-zA-ZÁ-ÿ])\1\1)[A-Za-zÁ-ÿ]{3,10}(\s[a-zA-ZÁ-ÿ]{3,20})?"
                         title=          "Introduce tu(s) nombre(s)"
                         maxlength=      "20"
                         required> 
                         <span> </span>
             </section>
 
-            <section class="grid-nested__CrearCuenta"><!--APELLIDO PATERNO-->
+            <section class="grid-nested__CrearCuenta">
                 <input  class=          "inputDatos" 
                         type=           "text" 
-                        id=             "apellidoPaterno" 
-                        name=           "apellidoPaterno" 
+                        id=             "apellido_P" 
+                        name=           "apellido_P" 
                         placeholder=    "Apellido Paterno"
-                        pattern=        "^(?!.*([A-Za-zÁ-ÿ])\1\1)[A-Za-z]{3,10}"
+                        pattern=        "^(?!.*([A-Za-zÁ-ÿñÑ])\1\1)[A-Za-zÁ-ÿñÑ]{3,10}"
                         title=          "Introduce tu apellido paterno"
                         maxlength=      "20"
                         required> 
                         <span> </span>                   
             </section>
 
-            <section class="grid-nested__CrearCuenta "><!--APELLIDO MATERNO-->
+            <section class="grid-nested__CrearCuenta ">
                 <input  class=          "inputDatos" 
                         type=           "text" 
-                        id=             "apellidoMaterno" 
-                        name=           "apellidoMaterno" 
+                        id=             "apellido_M" 
+                        name=           "apellido_M" 
                         placeholder=    "Apellido Materno"
-                        pattern=        "^(?!.*([a-zA-Z])\1\1)[A-Za-z]{3,10}"
+                        pattern=        "^(?!.*([a-zA-ZÁ-ÿñÑ])\1\1)[A-Za-zÁ-ÿñÑ]{3,10}"
                         title=          "Introduce tu apellido materno"
                         maxlength=      "20"
                         required> 
                         <span> </span>
             </section>
-        </div> <!--FIN DE NOMBRE(S) Y APELLIDOS-->
+        </div><!--FIN DE NOMBRE(S) Y APELLIDOS-->
 
-        <section class="grid-nested__CrearCuenta c1"><!--NOMBRE DE USUARIO -->   
+        <!--NOMBRE DE USUARIO -->
+        <section class="grid-nested__CrearCuenta c1">
             <input  class=             "inputDatos"
                     type=               "text" 
-                    id=                 "nombreUsuario"
-                    name=               "nombreUsuario"
+                    id=                 "user"
+                    name=               "user"
                     placeholder=        "Nombre de usuario"
-                    pattern=            "^[a-zA-Z0-9]{2,20}$"
-                    title=              "Introduce tu nombre de usuario"
+                    pattern=            "^[a-zA-Z0-9]{4,20}$"
+                    title=              "Introduce tu nombre de usuario (Sólamente letras y números)"
                     maxlength=          "20"
                     required> 
                     <span> </span>
         </section>
-
-        <section class="grid-nested__CrearCuenta c1"> <!-- CORREO -->   
+        
+        <!-- CORREO -->
+        <section class="grid-nested__CrearCuenta c1">    
             <input      class=          "inputDatos"  
                         type=           "email" 
                         id=             "correo" 
@@ -86,20 +89,23 @@
                         required> 
                         <span> </span>
         </section>
-    
-        <section class="grid-nested__CrearCuenta c2"><!--CONTRASEÑA 1 -->
+        
+        <!--CONTRASEÑA 1 -->
+        <section class="grid-nested__CrearCuenta c2">
             <input      class=          "inputDatos" 
                         type=           "password" 
-                        id=             "contrasenia1" 
-                        name=           "contrasenia1"  
+                        id=             "passwd" 
+                        name=           "passwd"  
                         placeholder=    "Contraseña nueva"             
                         pattern=        "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        title=          "Ingresa una contraseña mayor a 8 carácteres con mínimo 1 mayúscula y 1 número"
+                        title=          "Ingresa una contraseña mayor a 8 carácteres con 1 mayúscula y 1 número"
                         required>
                         <span> </span>
+                        <!-- onclick=        "validarContraseniaRecuperacion(event)"-->
         </section>
-
-        <section class="grid-nested__CrearCuenta c3  ajuste__derecha__CrearCuenta"> <!--CONTRASEÑA 2 -->
+        
+        <!--CONTRASEÑA 2     -->
+        <section class="grid-nested__CrearCuenta c3">
             <input      class=          "inputDatos" 
                         type=           "password" 
                         id=             "contrasenia2" 
@@ -110,16 +116,7 @@
                         required>
                         <span> </span>
         </section>
-<!--
-        <section class="grid-nested__CrearCuenta c1"> <!--FECHA CUMPLEAÑOS -
-            <input      class=          "inputDatos" 
-                        type=           "date" 
-                        id=             "fecha" 
-                        name=           "fecha" 
-                        required> 
-                        <span> </span>
-        </section>
--->
+    
         <section class="grid-nested__CrearCuenta c1 centrar"><!-- ENVIAR-->
             <input      class=          "botonEnviar hoverable" 
                         type=           "submit" 
@@ -128,6 +125,7 @@
 
     </form>
 
-    <script src="validacionCrearCuenta.js"></script>
+    <script src="validacioncrearCuenta.js"></script>
+
 </body>
 </html>

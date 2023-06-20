@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="" class="estructura estructuraCambioContraseña contenedorGrid" method="post">
+    <form id="formulario" action="/cambio_contrasenia/cambioContrasenia" class="estructura estructuraCambioContraseña contenedorGrid" method="post">
         
         <section class="nested-grid"    >
             <h4>NUEVA CONTRASEÑA</h4>
@@ -22,9 +22,9 @@
         <section class="nested-grid">
             <input class="inputDatos"
                     type=               "password"
-                    id=                 "nuevaContrasenia1"
-                    name=               "nuevaContrasenia1" 
-                    placeholder=        "Ingresa la nueva contraseña"
+                    id=                 "pass"
+                    name=               "pass" 
+                    placeholder=        "Ingresa tu nueva contraseña"
                     pattern=            "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     required>
                     <span></span>
@@ -33,8 +33,8 @@
         <section class="nested-grid">
             <input class="inputDatos"
                     type=               "password"
-                    id=                 "nuevaContrasenia2"
-                    name=               "nuevaContrasenia2" 
+                    id=                 "pass1"
+                    name=               "pass1" 
                     placeholder=        "Confirma tu contraseña"
                     pattern=            "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     required>
@@ -42,17 +42,11 @@
         </section>    
     
         <section class="nested-grid centrar">
-            <input  onclick=    "validarContraseniaRecuperacion(event)"
-                    class=      "botonEnviar hoverable"
+            <input  class=      "botonEnviar hoverable"
                     type=       "submit"
                     value=      "Enviar">
-
-                    <div id="error-message" class="nested-grid">
-                        Las contraseñas no coinciden; ingresalas correctamente.
-                    </div>
-
         </section>
     </form>
-    <script src="validacion.js"></script>
+    <script src="ValidacioncambioDeContraseña.js"></script>
 </body>
 </html>

@@ -1,17 +1,24 @@
 /***************************************************************************/
 /*GLOBAL*/
+header{
+    display:                grid;
+    justify-content:        center;
+     background:             #24303c;
+}
 
 body{
+    background:             #f2e6cf; 
     display:                flex;
     justify-content:        center;
     align-items:            center;
     height:                 100vh;
     margin:                 0;
+
 }
 
 .estructura{
-    background:             #24303c;  
-    /*color:                  white ;VERIFICAR SI SE PUEDE QUITAR*/
+/*    background:             #24303c;  */
+    background:             #114c5f;
     box-shadow:             7px 13px 37px #000; /*SOMBRA*/
     margin-top:             20px;
     border-radius:          6px;
@@ -27,24 +34,32 @@ body{
 }
 
 .botonEnviar{    
-    background-color:       #52c22f;
+    background-color:       #9cd2d3d4;
     color:                  white;
     font-size:              20px;
     height:                 50px;
     width:                  200px;
     border-radius:          4px;
+
+    font-weight:            bold;
 }/*FIN DE botonEnviar*/
 
 input:hover{
-    border:                 3px #4466af solid;
+/*    border:                 3px #4466af solid;*/
+    border:                 3px #0799b6 solid;
 }
 
 .hoverable:hover {
-    background-color:       #34b40d;
+    background-color:           #0799b6;
 }
 
 /****************************************************************************/
 /*INICIAR SESION*/
+
+.titulo{
+    border: 3px green solid;
+
+    }
 
 .iniciarSesion{    
     width:                  500px;
@@ -59,7 +74,7 @@ input:hover{
 }
 
 .grid-nested__IniciarSesion{
-    /*border: 3px green solid;*/ 
+    /*border: 3px green solid;*/
     margin:                 4px;
     padding:                5px;
 }
@@ -98,6 +113,10 @@ a{
     text-decoration:        none;
 }
 
+a:hover{
+    color:                  #0799b6;
+    font-weight:            bold;
+}
 /****************************************************************************/
 /*CREAR CUENTA*/
 
@@ -114,7 +133,7 @@ a{
 }
 
 .grid-nested__CrearCuenta{
-/*    border:                 2px #0799b6 solid;*/
+    /*border:                 2px #0799b6 solid;*/
     margin:                 5px;
     padding:                2px;
 }
@@ -217,6 +236,15 @@ a{
     margin:                 8px 8px;
 }
 
+/****************************************************************************/
+/* DATOS DE USUARIO */
+.estructuraDatosUsuario{
+    width:                  500px;
+    height:                 470px;
+}/*FIN DE registro*/
+
+/****************************************************************************/
+
 #error-message{
     margin-top:             20px;
     color:                  red;
@@ -228,9 +256,8 @@ a{
 .error{
     color:                 red ;
     display:                block;
-
 }
 
 .invalid{
-    border: 3px red solid;    
+    border: 2px red solid;    
 }
