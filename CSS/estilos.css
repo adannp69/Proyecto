@@ -1,21 +1,39 @@
 /***************************************************************************/
 /*GLOBAL*/
-header{
-    display:                grid;
-    justify-content:        center;
-     background:             #24303c;
-}
-
 body{
+        border: 3px green solid;
     background:             #f2e6cf; 
-    display:                flex;
+    /*display:                flex;*/
     justify-content:        center;
     align-items:            center;
     height:                 100vh;
     margin:                 0;
-
 }
 
+/***************************************************************************/
+
+header{
+/*    border: 3px green solid;*/
+    display:                flex;
+
+justify-content:        center;
+align-items:            center;
+text-align:             center;
+font-family:            'calibri';
+}
+
+main{
+/*    border: 3px rgb(4, 0, 128) solid;*/
+    display:                flex;
+    justify-content:        center;
+    align-items:            center;
+    text-align:             center;
+}
+
+.fuente{
+    font-size: 35px;
+}
+/***************************************************************************/
 .estructura{
 /*    background:             #24303c;  */
     background:             #114c5f;
@@ -58,8 +76,7 @@ input:hover{
 
 .titulo{
     border: 3px green solid;
-
-    }
+}
 
 .iniciarSesion{    
     width:                  500px;
@@ -122,7 +139,7 @@ a:hover{
 
 .crearCuenta{
     width:                  550px;
-    height:                 550px;   
+    height:                 490px;   
 }
 
 .grid__CrearCuenta{
